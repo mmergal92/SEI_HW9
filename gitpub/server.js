@@ -12,8 +12,14 @@ const port = 3000;
 //     res.send('Welcome to the Github App!');
 //   });
 
+// app.get('/drinks/', (req,res) =>{
+//   res.send(drinks);
+// })
+
 app.get('/drinks/', (req,res) =>{
-  res.send(drinks);
+  res.render('index.ejs', {
+    allDrinks: drinks
+  });
 })
 
 // LISTENER
