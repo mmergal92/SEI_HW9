@@ -16,11 +16,15 @@ const port = 3000;
 //   res.send(drinks);
 // })
 
-app.get('/drinks/', (req,res) =>{
-  res.render('index.ejs', {
-    allDrinks: drinks
-  });
-})
+// app.get('/drinks/', (req,res) =>{
+//   res.render('index.ejs', {
+//     allDrinks: drinks
+//   });
+// })
+
+app.get('/drinks/:id', (req,res) =>{
+  res.send(req.params.id)
+});
 
 // LISTENER
 app.listen(port, ()=> {
