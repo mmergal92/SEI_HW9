@@ -7,9 +7,12 @@
     <title>Drinks Show EJS</title>
 </head>
 <body>
-    <h1>Drinks show page</h1>
+    <h1>At foo bar</h1>
     <p>
-        The <%= drink.name %> is $<%= drink.price %>.</br>
+        <h2><%= drink.name.charAt(0).toUpperCase()+ drink.name.substring(1) %></h2></br>
+        <img src= <%= drink.image %>></br>
+        <!-- not sure how to edit jpg to png, but the jpg seemed to be visisble on the site -->
+        <h3>$<%= drink.price %></h3></br>
       <a href="/drinks">Back to Index</a>
     </p>
 </body>
