@@ -3,7 +3,7 @@ const express = require ('express');
 const app = express();
 const drinks = require('./models/drinks.js');
 console.log(drinks);
-
+app.use('/public', express.static('public'));
 //PORT
 const port = 3000;
 

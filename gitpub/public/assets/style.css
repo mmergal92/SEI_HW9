@@ -1,0 +1,23 @@
+body{
+    text-align: center;
+    padding: 10px;
+    background-color: seashell;
+}
+img{
+    max-width: 50%;
+}
+ul{
+    list-style: none;
+}
+a:link{
+    text-decoration: dotted;
+}
+a:hover{
+    color: hotpink;
+}
+h1{
+    color: navy;
+}
+p{
+    color: navy;
+}
