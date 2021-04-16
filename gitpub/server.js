@@ -16,14 +16,18 @@ const port = 3000;
 //   res.send(drinks);
 // })
 
-// app.get('/drinks/', (req,res) =>{
-//   res.render('index.ejs', {
-//     allDrinks: drinks
-//   });
-// })
+//Index EJS route
+app.get('/drinks/', (req,res) =>{
+  res.render('index.ejs', {
+    allDrinks: drinks
+  });
+})
 
+//Show EJS route
 app.get('/drinks/:id', (req,res) =>{
-  res.send(req.params.id)
+  res.render('show.ejs', {
+    drink: drinks[req.params.id]
+  })
 });
 
 // LISTENER
