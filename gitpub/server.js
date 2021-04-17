@@ -2,7 +2,9 @@
 const express = require ('express');
 const app = express();
 const drinks = require('./models/drinks.js');
+const food = require('./models/food.js')
 console.log(drinks);
+console.log(food);
 app.use('/public', express.static('public'));
 //PORT
 const port = 3000;
@@ -19,14 +21,21 @@ const port = 3000;
 //Index EJS route
 app.get('/drinks/', (req,res) =>{
   res.render('index.ejs', {
-    allDrinks: drinks
+    allDrinks: drinks, 
+    allFood: food
   });
 })
 
-//Show EJS route
+// Show EJS route
 app.get('/drinks/:id', (req,res) =>{
   res.render('show.ejs', {
-    drink: drinks[req.params.id]
+    drink: drinks[req.params.id],
+  })
+});
+
+app.get('/food/:id', (req,res) =>{
+  res.render('showFood.ejs', {
+    foods: food[req.params.id]
   })
 });
 

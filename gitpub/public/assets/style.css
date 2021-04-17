@@ -1,13 +1,17 @@
 body{
-    text-align: center;
+    text-align: left;
     padding: 10px;
     background-color: seashell;
 }
 img{
     max-width: 50%;
 }
+h2{
+    color:deeppink;
+}
 ul{
-    list-style: none;
+    list-style: circle;
+    color: darksalmon;
 }
 a:link{
     text-decoration: dotted;

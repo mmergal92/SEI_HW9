@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href= "/public/assets/style.css" rel="stylesheet" type="text/css" />
-    <title>Drinks Show EJS</title>
+    <title>Food Show EJS</title>
 </head>
 <body>
-    <h1>At foo bar</h1>
+    <h1>Food Menu</h1>
     <p>
-        <h2><%= drink.name.charAt(0).toUpperCase()+ drink.name.substring(1) %></h2></br>
-        <img src= <%= drink.image %>></br>
+        <h2><%= foods.name.charAt(0).toUpperCase()+ foods.name.substring(1) %></h2></br>
+        <img src= <%= foods.image %>></br>
         <!-- not sure how to edit jpg to png, but the jpg seemed to be visisble on the site -->
-        <h3>$<%= drink.price %></h3></br>
+        <h3>$<%= foods.price %></h3></br>
       <a href="/drinks">Back to Index</a>
 
     </p>
